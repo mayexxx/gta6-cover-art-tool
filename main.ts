@@ -1,11 +1,13 @@
 import { cpSync, mkdirSync, writeFileSync } from 'node:fs';
 import { resolve, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { buildDossier } from './vendor/makefun-app.ts';
 
+const scriptDirectory = fileURLToPath(new URL('.', import.meta.url));
 const output = resolve(process.env.MAKEFUN_OUTPUT_DIR || '/output');
 mkdirSync(output, { recursive: true });
 for (const directory of ['app', 'screenshots']) {
-  cpSync(resolve(directory), join(output, directory), { recursive: true });
+  cpSync(resolve(scriptDirectory, directory), join(output, directory), { recursive: true });
 }
 writeFileSync(join(output, 'dossier.json'), buildDossier(output, {
   text_max_bytes: 163840,
