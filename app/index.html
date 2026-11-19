@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vice City Cover Studio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar"><div class="brand"><span class="brand-icon">V<span>✦</span></span><div><strong>VICE CITY</strong><small>COVER STUDIO</small></div></div><div class="top-center">YOUR STORY. YOUR COVER.</div><div class="top-right"><span class="status-dot"></span> OFFLINE STUDIO <span class="version">01 / 03</span></div></header>
+  <main class="workspace">
+    <aside class="sidebar">
+      <div class="intro"><div class="eyebrow">THE CREATIVE DEPARTMENT <span>✦</span></div><h1>MAKE A<br><em>SCENE.</em></h1><p>Turn your moments into a cover story.</p></div>
+      <section><div class="section-heading"><span><b>01</b> CHOOSE A LAYOUT</span><span>THE COMPOSITION</span></div><div class="layouts" id="layouts"><button data-layout="strip" class="active" title="3-panel strip"><i class="mini strip"><u></u><u></u><u></u></i><span>STRIP</span></button><button data-layout="grid" title="2 by 2 grid"><i class="mini grid"><u></u><u></u><u></u><u></u></i><span>GRID</span></button><button data-layout="hero" title="Hero and side strips"><i class="mini hero"><u></u><u></u><u></u></i><span>HERO</span></button></div></section>
+      <section><div class="section-heading"><span><b>02</b> CAST YOUR PANELS</span><span>SELECT TO EDIT</span></div><div id="panelButtons" class="panel-buttons"></div><label class="upload">＋ <span>ADD A PHOTO</span><input id="upload" type="file" accept="image/*"></label><div class="sample-label">OR TRY AN ORIGINAL ILLUSTRATION</div><div class="samples"><button data-sample="woman"><img src="samples/woman.svg" alt="Woman at sunset"></button><button data-sample="man"><img src="samples/man.svg" alt="Man in a tropical shirt"></button><button data-sample="skyline"><img src="samples/skyline.svg" alt="Palm skyline"></button></div></section>
+      <section><div class="section-heading"><span><b>03</b> FRAME THE SHOT</span><span>DRAG IMAGE TO PAN</span></div><div class="zoom-row"><span>−</span><input id="zoom" type="range" min="1" max="3" step="0.01" value="1"><span>＋</span></div><div class="hint">Drag on the canvas to move the selected photo.</div></section>
+      <section><div class="section-heading"><span><b>04</b> NAME YOUR STORY</span><span>THE HEADLINE</span></div><input id="caption" class="caption-input" maxlength="42" value="PARADISE FOUND" aria-label="Cover caption"></section>
+    </aside>
+    <section class="stage"><div class="stage-top"><div><span class="eyebrow">THE COVER PREVIEW</span><h2>YOUR STORY, <em>YOUR RULES.</em></h2></div><div class="stage-note"><span>✦</span> MADE FOR THE MOMENT<br><small>DRAG TO REFRAME YOUR SHOT</small></div></div><div class="canvas-wrap"><canvas id="canvas" width="1920" height="1080" aria-label="Interactive cover preview"></canvas></div><div class="stage-bottom"><div><span class="pink-dot"></span> LIVE PREVIEW <span class="divider">/</span> <span id="sizeLabel">LANDSCAPE · 1920 × 1080</span></div><span>DESIGNED IN PARADISE ✦</span></div></section>
+    <aside class="export-panel"><div class="export-title"><span>✦</span><div><strong>READY FOR<br>THE SPOTLIGHT?</strong><p>Pick a size and save your cover.</p></div></div><div class="export-actions"><button data-size="1080x1080"><span>01</span><strong>SQUARE</strong><small>1080 × 1080</small><b>↗</b></button><button data-size="1080x1350"><span>02</span><strong>PORTRAIT</strong><small>1080 × 1350</small><b>↗</b></button><button data-size="1920x1080"><span>03</span><strong>LANDSCAPE</strong><small>1920 × 1080</small><b>↗</b></button></div><div class="privacy"><span>✳</span><p><strong>YOUR PHOTOS STAY YOURS.</strong><br>Everything happens on this device.</p></div><div class="side-footer">VICE CITY COVER STUDIO<br><span>AN ORIGINAL PRODUCTION · 2026</span></div></aside>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
